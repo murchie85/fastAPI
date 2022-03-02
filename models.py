@@ -20,3 +20,12 @@ class User(BaseModel):
 	middle_name:  Optional[str]
 	gender:       Gender 
 	roles:        List[Role]
+
+
+
+class userUpdateRequest(BaseModel):
+	first_name:   Optional[str]
+	last_name:    Optional[str]
+	middle_name:  Optional[str]
+	gender:       Optional[str] 
+	roles:        Optional[List[Role]]

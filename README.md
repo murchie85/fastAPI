@@ -43,6 +43,41 @@ you also need a Uvicorn server which is a `ASGI` server (asynchronous service ga
 Uvicorn is similar to `express js`
 
 
+## Syntax Notes 
+
+Using data types: `name:type` or `name:type=value`  
+  
+
+```python
+class userUpdateRequest():
+	first_name:   str
+	last_name:    str  = 'banana'
+```
+
+### typing List
+    
+- Simply adds hints for the list 
+
+
+format is:  
+  
+`varName: List[object] = [obj, obj...]`
+  
+example:  
+
+```python
+db: List[User] = [
+	User(
+		id= UUID("4142061b-3062-4206-9de6-28f9f516db29"),
+		first_name="Adam",
+		last_name='mcminge',
+		gender = Gender.male,
+		roles = [Role.admin,Role.user]
+		)
+]
+```
+
+
 ## Build and run
 
 - Make a main.py
@@ -97,6 +132,20 @@ async def read_results():
 
 ![](resources/swagger.png)
 
+**simply go to localhost:8000/docs**  
+  
+
+- Automatically groups your API endpoints 
+- Assuming swagger looks at the functions under the defined endpoints
+
+
+## redoc view
+
+![](resources/redoc.png)
+
+**Non-interactive documentation**  
+
+You can download it.
 
 ## Pydantic and Data Models
 
