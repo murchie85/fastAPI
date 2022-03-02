@@ -36,6 +36,14 @@ async def fetch_users():
 	return db
 
 # post
-@app.get("/api/v1/users")
-async def fetch_users():
-	return db
+"""
+takes user from request body
+appends to db
+returns it back to client
+
+Has to have the same shape as User data object
+"""
+@app.post("/api/v1/users")
+async def register_user(user: User):
+	db.append(user)
+	return {'id': user.id}
