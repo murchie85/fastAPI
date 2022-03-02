@@ -57,6 +57,18 @@ uvicorn main:app --reload
 **Connect** Establishes a connection or tunnel to server.  
 
 
+
+## Using Async
+
+use async lets us use `await` 
+
+```python
+@app.get('/')
+async def read_results():
+    results = await some_library()
+    return results
+```
+
 ## Flow 
 
 ![](resources/flow.png)
