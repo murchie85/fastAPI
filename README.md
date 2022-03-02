@@ -4,6 +4,7 @@
 
 - install fastapi [Fastapi Website](https://fastapi.tiangolo.com/)
 - install uvicorn [uvicorn Website](https://www.uvicorn.org/)
+- Pydantic for Model (datatype) validation [pydantic](https://pydantic-docs.helpmanual.io/)
 
 ## Install 
 
@@ -68,6 +69,11 @@ async def read_results():
     results = await some_library()
     return results
 ```
+
+
+## Pydantic and Models 
+
+- Use typing, pydantic (basemodel) and others in the models.py
 
 ## Flow 
 
